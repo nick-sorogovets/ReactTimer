@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Clock from 'Clock';
 import CountdownForm from 'CountdownForm'
 import Controls from 'Controls';
+import { clearInterval } from 'timers';
 
 class Countdown extends Component {
 
@@ -28,6 +29,11 @@ class Countdown extends Component {
           break;
       }
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    this.timer = undefined;
   }
 
   startTimer() {
