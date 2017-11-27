@@ -5,7 +5,7 @@ import $ from 'jQuery';
 
 const TestUtils = require('react-addons-test-utils');
 
-import Clock from './Clock';
+import Clock from 'Clock';
 
 describe('Clock', () => {
   it('Clock component should exists', () => {
