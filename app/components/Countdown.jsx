@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Clock from 'Clock';
 import CountdownForm from 'CountdownForm'
 import Controls from 'Controls';
-import { clearInterval } from 'timers';
 
 class Countdown extends Component {
 
@@ -24,8 +23,6 @@ class Countdown extends Component {
         case 'paused':
           clearInterval(this.timer);
           this.timer = undefined;
-          break;
-        default:
           break;
       }
     }
@@ -76,6 +73,7 @@ class Countdown extends Component {
     }
     return (
       <div>
+        <h1 className="page-title">Countdown App</h1>
         <Clock totalSeconds={count} />
         {renderControls()}
       </div>
