@@ -20,7 +20,7 @@ class Controls extends Component {
             className="button secondary"
             onClick={this.onStatusChange('paused')}>Pause</button>
         );
-      } else if (status != 'started') {
+      } else {
         return (
           <button
             className="button primary"
