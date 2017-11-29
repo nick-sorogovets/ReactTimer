@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Controls extends Component {
   static propTypes = {
-    countdownStatus: React.PropTypes.string.isRequired,
+    status: React.PropTypes.string.isRequired,
     onStatusChange: React.PropTypes.func.isRequired,
   }
 
@@ -12,15 +12,15 @@ class Controls extends Component {
     }
   }
   render() {
-    const { countdownStatus } = this.props;
+    const { status } = this.props;
     const renderStartStopButton = () => {
-      if (countdownStatus === 'started') {
+      if (status === 'started') {
         return (
           <button
             className="button secondary"
             onClick={this.onStatusChange('paused')}>Pause</button>
         );
-      } else if (countdownStatus === 'paused') {
+      } else if (status != 'started') {
         return (
           <button
             className="button primary"

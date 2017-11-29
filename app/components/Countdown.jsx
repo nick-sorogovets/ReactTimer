@@ -63,7 +63,7 @@ class Countdown extends Component {
     const renderControls = () => {
       if (countdownStatus !== 'stopped') {
         return (
-          <Controls countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange} />
+          <Controls status={countdownStatus} onStatusChange={this.handleStatusChange} />
         );
       } else {
         return (
